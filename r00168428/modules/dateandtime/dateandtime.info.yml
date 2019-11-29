@@ -1,0 +1,6 @@
+name: a date and time indicator
+description: My nice module
+type: module
+core: 8.x
+dependecies:
+  - block
