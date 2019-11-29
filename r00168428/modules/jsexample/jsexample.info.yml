@@ -1,6 +1,0 @@
-name: jsexample module
-description: My nice module
-type: module
-core: 8.x
-dependecies:
-  - block
