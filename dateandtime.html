@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button type="button" onclick="dateandtime()">check date and time</button>
+
+<p id="dateandtime">date and time</p>
+
+<script>
+    function dateandtime() {
+        // while (true){
+            var d = new Date();
+            result =d.getHours() + ":" + d.getMinutes() + ":" +  d.getSeconds() + " " +  d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
+            console.log(result);
+            document.getElementById("dateandtime").innerHTML = result;
+        // }
+
+    }
+</script>
+</body>
+</html>
