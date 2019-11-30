@@ -1,0 +1,6 @@
+name: video player for user picked video
+description: My nice module
+type: module
+core: 8.x
+dependecies:
+  - block
