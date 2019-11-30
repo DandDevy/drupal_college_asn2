@@ -1,0 +1,6 @@
+name: a video player for 2 set videos
+description: My nice module
+type: module
+core: 8.x
+dependecies:
+  - block
