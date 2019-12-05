@@ -10,22 +10,23 @@ use Drupal\Core\Render\Markup;
  * )
  */
 class tableautoincrementidBlock extends BlockBase {
+
      public function build() {
          $table_name = 'tableautoincrementid';
           $database = \Drupal::database();
-          $schema = $database->schema();  
+          $schema = $database->schema();
          $text = "table";
-          $res = others::table_exists($table_name); 
+          $res = others::table_exists($table_name);
          if ($res == true) {
              $text = "Table already exist's";
           }
-          else {            
+          else {
             $table_schema = [
               'fields' => [
                  'sid' => [
                 'type' => 'int',
                  'not null' => TRUE,
-				 
+
                   ],
                'name' => [
                'type' => 'varchar',
@@ -48,15 +49,29 @@ class tableautoincrementidBlock extends BlockBase {
               ],
                  ],
           'primary key' => ['sid'],
-			#'AUTOINCREMENT' => ['sid'],
+			'AUTOINCREMENT' => ['sid'],
+            ];
+			$table_schema = [
+              'fields' => [
+                 'sid' => [
+                'type' => 'int',
+                 'not null' => TRUE,
+                  ],
+               'name' => [
+               'type' => 'varchar',
+                'not null' => TRUE,
+             'length' => 25,
+              ],
+                 ],
+          'primary key' => ['sid'],
             ];
         $schema->createTable($table_name, $table_schema);
         $text = "New Table was added";
                           }
   return array(
-                '#title' => 'Hello World!',
+                '#title' => 'table adder!',
                 '#markup' => $text,
-            );         
+            );
            }
 }
 
