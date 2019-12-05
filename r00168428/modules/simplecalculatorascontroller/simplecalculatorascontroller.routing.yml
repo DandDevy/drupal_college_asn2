@@ -1,0 +1,6 @@
+calculator:
+    path: /simplecalculatorascontroller
+    defaults:
+        _controller: Drupal\simplecalculatorascontroller\Controller\simplecalculatorascontrollerController::hello
+    requirements:
+        _permission: 'access content'
